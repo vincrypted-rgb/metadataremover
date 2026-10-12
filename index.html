@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Metadata Remover</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>Metadata Remover</h1>
+  <p class="sub">Strips EXIF, GPS, XMP, IPTC, ICC, and comments. Nothing leaves your browser.</p>
+
+  <div id="drop" tabindex="0">
+    <strong>Drop files here</strong><br>or click to choose
+    <input type="file" id="file" accept="image/*" multiple hidden>
+  </div>
+
+  <div id="options">
+    <label><input type="checkbox" id="opt-orientation" checked> Preserve EXIF orientation (rotation)</label>
+    <label><input type="checkbox" id="opt-color" checked> Preserve ICC color profile</label>
+    <label><input type="checkbox" id="opt-copyright" checked> Preserve copyright notice</label>
+    <label><input type="checkbox" id="opt-c2pa" checked> Preserve Content Credentials (C2PA)</label>
+  </div>
+
+  <div id="out" hidden></div>
+
+  <p class="privacy">
+    Everything runs locally. Files are never uploaded or stored on servers.
+    Once you close the tab, the data is gone.
+  </p>
+
+  <script type="module" src="src/app.js"></script>
+</body>
+</html>
